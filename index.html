@@ -41,15 +41,15 @@
         height: 45px;
         width: 45px;
         bottom: 120px;
-        right: 45px;
+        right: 185px;
         cursor: pointer;
     }
     .next-arrow{
         position: relative;
         height: 45px;
         width: 45px;
+        left: 185px;
         bottom: 160px;
-        left: 330px;
         cursor: pointer;
        
     }
@@ -65,6 +65,7 @@
            text-align: center;
            display: block;
     }
+    
     </style>
 </head>
 <body>
@@ -72,14 +73,15 @@
   <div class="main-container">
 
   
-       <div class="container">   
-    
-        
+       <div class="container">  
             <img id="main-element" src="./Image.jpeg"/>
             <div class="butn-container">
+               
              <button class="prebutn" onclick="previmage()">Prev</button>
              <button class="nextbutn" onclick="nextimage()">Next</button>
-        </div>
+            </div>
+            <img class="prev-arrow" onclick="previmage()" src="./previousarrow.png"/>
+            <img class="next-arrow" onclick="nextimage()" src="./nextarrow.png"/> 
        </div>
     </div>
 <script>
@@ -102,7 +104,7 @@
         }
         MainElement.src=Images[Imageindex];
      }
-     setInterval(nextimage,2000);
+    //  setInterval(nextimage,2000);
 </script>
 </body>
 </html>
