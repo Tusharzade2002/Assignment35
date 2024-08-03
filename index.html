@@ -76,9 +76,6 @@
     
         
             <img id="main-element" src="./Image.jpeg"/>
-
-            <!-- <img class="prev-arrow" src="previousarrow.png"/>
-            <img class="next-arrow" src="nextarrow.png"/> -->
             <div class="butn-container">
              <button class="prebutn" onclick="previmage()">Prev</button>
              <button class="nextbutn" onclick="nextimage()">Next</button>
@@ -86,7 +83,19 @@
        </div>
     </div>
 <script>
-     
+    let Images = [ "./Image.jpeg","./images2.jpeg","./images3.jpeg","./images4.jpeg","./image5.jpg"];
+    const MainElement =document.getElementById("main-element");
+    let Imageindex = 0 ;
+     function previmage(){
+
+               if(Imageindex == 0){
+                 Imageindex=Images.length-1;
+               }else{
+                Imageindex--;
+               }
+
+               MainElement.src=Images[Imageindex];
+     }
 </script>
 </body>
 </html>
